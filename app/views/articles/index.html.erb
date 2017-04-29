@@ -1,0 +1,41 @@
+<h1 align="center">Listing articles</h1>
+
+<table align="center">
+  <tr>
+    <th></th>
+    <th></th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Comments</th>
+    <th>Up Votes</th>
+    <th>Down Votes</th>
+  </tr>
+
+  <% @articles.each do |article| %>
+    <tr>
+      <%if !current_user.nil?%>
+        <td><%= link_to 'Up Vote', edit_article_path(article, check: 1) %></td>
+        <td><%= link_to 'Down Vote', edit_article_path(article, check: 2) %></td>
+      <%else%>
+        <td><%= link_to 'Up Vote', '/login' %></td>
+        <td><%= link_to 'Down Vote', '/login' %></td>
+      <%end%>
+      <td><%= link_to article.title, article_path(article) %></td>
+      <td><%= article.author %></td>
+      <td><%= article.comments.count %></td>
+      <td><%= article.up_votes%></td>
+      <td><%= article.down_votes%></td>
+      <%if !current_user.nil? && article.author == current_user.name%>
+        <td><%= link_to 'Edit', edit_article_path(article, check: 0) %></td>
+        <td><%= link_to 'Destroy', article_path(article),
+          method: :delete,
+          data: { confirm: 'Are you sure?'  } %></td>
+      <%end%>
+    </tr>
+  <% end %>
+</table>
+<%if !current_user.nil?%>
+  <div align="center">
+    <%= link_to 'New article', new_article_path %>
+  </div>
+<%end%>
