@@ -1,7 +1,6 @@
 <%= form_for([@article, @article.comments.build]) do |f| %>
   <p align="center">
-    <%= f.label :commenter%><br>
-    <%= f.text_field :commenter, :readonly => true, value:current_user.name  %>
+    <%= f.hidden_field :commenter, value:current_user.name  %>
   </p>
   <p align="center">
     <%= f.label :body %><br>

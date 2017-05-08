@@ -24,8 +24,6 @@ class ArticlesController < ApplicationController
       else
         redirect_to '/'
       end
-    else   
-      @article = Article.find(params[:id])
     end
   end
 

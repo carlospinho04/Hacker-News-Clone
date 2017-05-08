@@ -4,6 +4,11 @@ html,body{
   height: 100%;
 
 }
+.vote{
+  width: 25px;
+  height: 25px;
+
+}
 
 .login-container{
   position: relative;

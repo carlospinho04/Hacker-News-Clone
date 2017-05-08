@@ -16,14 +16,9 @@
 
   <table id='helv' align='center'>
     <tr>
-      <th><%= f.label :author %></th>
-      <th><%= f.label :up_votes %></th>
-      <th><%= f.label :down_votes %></th>
-    </tr>
-    <tr>
-      <td><%= f.text_field :author, :readonly => true, value:current_user.name %></td>
-      <td><%= f.text_field :up_votes, :readonly => true, value:0 %></td>
-      <td><%= f.text_field :down_votes, :readonly => true, value:0 %></td>
+      <td><%= f.hidden_field :author, value:current_user.name %></td>
+      <td><%= f.hidden_field :up_votes, value:0 %></td>
+      <td><%= f.hidden_field :down_votes, value:0 %></td>
     </tr>
   </table>
   <p class='c' id='helv'>
