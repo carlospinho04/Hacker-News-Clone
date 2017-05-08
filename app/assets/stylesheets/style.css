@@ -4,6 +4,7 @@ html,body{
   height: 100%;
 
 }
+
 .vote{
   width: 25px;
   height: 25px;
@@ -32,6 +33,29 @@ html,body{
 
 }
 
+.data-table{
+  font-size: 10px;
+  text-align: justify;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(112, 128, 144);
+
+}
+
+.title-table{
+  text-align: justify;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(0, 0, 128);
+  text-decoration: none;
+
+}
+
+.text-table{
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(20, 20, 20);
+
+}
+
 #helv{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: rgb(127,127,127);
@@ -39,7 +63,7 @@ html,body{
   font-style: normal;
   font-variant: normal;
   font-weight: 500;
-  line-height: 26.4px;4px
+  line-height: 26.4px;
 
 }
 

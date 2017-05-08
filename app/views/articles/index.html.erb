@@ -1,41 +1,34 @@
-<h1 align="center">Listing articles</h1>
-
-<table align="center">
-  <% @articles.each do |article| %>
-    <table BORDER="1" CELLPADDING="1" CELLSPACING="10" align="center">
-      <td>
-        <table BORDER="1" CELLPADDING="3" CELLSPACING="3">
-          <%if !current_user.nil?%>
-            <td><%= link_to image_tag("up.png", :class => "vote"), edit_article_path(article, check: 1) %></td>
-            <td><%= link_to image_tag("down.png", :class => "vote"), edit_article_path(article, check: 2) %></td>
-          <%else%>
-            <td><%= link_to image_tag("up.png", :class => "vote"), '/login' %></td>
-            <td><%= link_to image_tag("down.png", :class => "vote"), '/login' %></td>
+<% @articles.each do |article| %>
+  <table border='0' cellpadding='0' cellspacing='0'>
+    <tbody>
+      <tr>
+        <%if !current_user.nil?%>
+          <td><%= link_to image_tag("up.png", :class => "vote"), edit_article_path(article, check: 1) %></td>
+          <td ><%= link_to image_tag("down.png", :class => "vote"), edit_article_path(article, check: 2) %></td>
+        <%else%>
+          <td><%= link_to image_tag("up.png", :class => "vote"), '/login' %></td>
+          <td><%= link_to image_tag("down.png", :class => "vote"), '/login' %></td>
+        <%end%> 
+        <td class="title-table"><%= link_to article.title, article_path(article), {:class => 'title-table'} %></td>
+        <td>
+          <%if !current_user.nil? && article.author == current_user.name%>
+            <td></td>
+            <td><%= link_to 'Destroy', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?'  }%></td>
           <%end%>
-          <tr>
-            <td><%= article.up_votes%></td>
-            <td><%= article.down_votes%></td>
-          </tr>
-        </table>
-      </td>
-      <td>
-        <table BORDER="1" CELLPADDING="3" CELLSPACING="3">
-          <td><%= link_to article.title, article_path(article) %></td>
-          <tr>
-            <td><%= "Author: #{article.author}, comments: #{article.comments.count}" %></td>
-          </tr>
-        </table>
-      </td> 
-   <td>
-      <%if !current_user.nil? && article.author == current_user.name%>
-        <td><%= link_to 'Destroy', article_path(article),
-          method: :delete,
-          data: { confirm: 'Are you sure?'  } %></td>
-      <%end%>
-    </td> </table>
-    
-  <% end %>
-</table>
+        </td>  
+      </tr>
+      <tr>
+        <td class="text-table"><%= article.up_votes%></td>
+        <td class="text-table"><%= article.down_votes%></td>
+        <td class="data-table"><%= "Author: #{article.author}, comments: #{article.comments.count}" %></td>
+      </tr>
+      <tr style="height:5px"></tr>
+    </tbody>
+  </table>
+
+<% end %>
 <%if !current_user.nil?%>
   <div align="center">
     <%= link_to 'New article', new_article_path %>
