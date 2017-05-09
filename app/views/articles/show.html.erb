@@ -1,10 +1,8 @@
-<p class='article-table'><strong>Title</strong></p>
-<p class='article-table'><%= @article.title %></p>
-<p class='article-table'><strong>Text</strong></p>
-<p class='article-table'><%= @article.text %></p>
-<h2 class='article-table'>Comments</h2>
+<p class='text' id='text-show-article'><%= @article.title %></p>
+<p class='text' id='text-show-article'><%= @article.text %></p>
+<h2 class='title' id='text-show-article'>Comments</h2>
 <%= render  @article.comments %>
 <%if !current_user.nil?%>
-  <h2 class='article-table'>Add comment</h2>
+  <h2 class='title' id='text-show-article'>Add comment</h2>
   <%= render 'comments/form' %>
 <%end%>

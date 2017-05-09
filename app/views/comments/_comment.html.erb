@@ -1,12 +1,13 @@
 <table class="article-table" border='0' cellpadding='10' cellspacing='0'>
   <tbody>
+      <td class="text" id="text-show-article">
+        <%= comment.body %>
+        </td>   
     <tr>
-      <td>
-        <%= comment.commenter %>
+      <td class="data-table">
+        <%= "Commenter: #{comment.commenter}" %>
       </td>
     </tr>
-    <td>
-      <%= comment.body %>
-      </td>
+
   </tbody>
 </table>

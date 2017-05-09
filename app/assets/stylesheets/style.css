@@ -73,6 +73,24 @@ html,body{
 
 }
 
+#text-show-article{
+  margin-left: 10%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+#text-show-article.title{
+  font-size: 20px;
+  color: rgb(0, 0, 128);
+
+}
+
+#text-show-article.text{
+  font-size: 15px;
+  color: rgb(54, 100, 139);
+
+}
+
 .article-table{
   margin-left: 10%;
 
@@ -88,26 +106,6 @@ html,body{
   line-height: 26.4px;
 
 }
-
-#output{
-  position: absolute;
-  width: 300px;
-  top: -75px;
-  left: 0;
-  color: #fff;
-
-}
-
-#output.alert-success{
-  background: rgb(25, 204, 25);
-
-}
-
-#output.alert-danger{
-  background: rgb(228, 105, 105);
-
-}
-
 
 .login-container::before,.login-container::after{
   content: "";
@@ -154,57 +152,34 @@ html,body{
   margin-top: 15px;
 
 }
+
+.submit2-box input{
+  width: 8%;
+  padding: 10px;
+  height:40px;
+  border: 1px solid #ccc;;
+  background: #fafafa;
+  transition:0.2s ease-in-out;
+  margin-top: 15px;
+  margin-left: 10%;
+
+}
+
+.submit3-box input{
+  width: 8%;
+  padding: 10px;
+  height:40px;
+  border: 1px solid #ccc;;
+  background: #fafafa;
+  transition:0.2s ease-in-out;
+  margin-top: 15px;
+
+}
+
 .form-box input:focus{
   outline: 0;
   background: #eee;
 
 }
 
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
 
-}
-
-@-webkit-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    transform: translateY(20px);
-
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-
-  }
-
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    -ms-transform: translateY(20px);
-    transform: translateY(20px);
-
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-
-  }
-
-}
-
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-}
