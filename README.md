@@ -10,5 +10,5 @@
 ### Database creation
 * `$ rails db:migrate`
 
-### Run Rails Application
+### Run Application
 * `$ rails server`
