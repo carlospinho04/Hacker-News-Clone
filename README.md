@@ -1,24 +1,14 @@
-# README
+# Hacker News Clone
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Dependencies
+* Ruby 2.3.1p112
+* Ruby on Rails 5.1.0
 
-Things you may want to cover:
+### System dependecies
+* `$ bundle install`
 
-* Ruby version
+### Database creation
+* `$ rails db:migrate`
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Run Application
+* `$ rails server`
