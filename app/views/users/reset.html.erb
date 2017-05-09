@@ -1,20 +1,20 @@
-<h1 class="c" id="helv">Reset Password</h1>
-<%= stylesheet_link_tag "style" %>
-<div class="container">
-  <div class="login-container">
-    <div id="output"></div>
-    <div class="form-box">
+<h1 class='c' id='helv'>Reset Password</h1>
+<%= stylesheet_link_tag 'style' %>
+<div class='container'>
+  <div class='login-container'>
+    <div id='output'></div>
+    <div class='form-box'>
       <%= form_tag '/resets' do %>
-        <p class="c" id="helv"> Name</p>
+        <p class='c' id='helv'> Name</p>
         <%= text_field_tag :name%>
-        <p class="c" id="helv"> Email</p>
+        <p class='c' id='helv'> Email</p>
         <%= text_field_tag :email%>
-        <p class="c" id="helv">Password </p>
+        <p class='c' id='helv'>Password </p>
         <%= password_field_tag :password %>
-        <p class="c" id="helv"> Password confirmation</p>
+        <p class='c' id='helv'> Password confirmation</p>
         <%= password_field_tag :password_confirmation%>
-        <div class="submit-box">
-          <%= submit_tag  "Submit"%>
+        <div class='submit-box'>
+          <%= submit_tag  'Submit'%>
         </div>
       <%end%>
     </div>

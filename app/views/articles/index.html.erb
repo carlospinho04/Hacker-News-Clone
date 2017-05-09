@@ -1,9 +1,9 @@
 <% @articles.first(30).each do |article| %>
-  <table class="article-table" border='0' cellpadding='0' cellspacing='0'>
+  <table class='article-table' border='0' cellpadding='0' cellspacing='0'>
     <tbody>
       <tr>
-        <td><%= link_to image_tag("up.png", :class => "vote"), edit_article_path(article, check: 1) %></td>
-        <td ><%= link_to image_tag("down.png", :class => "vote"), edit_article_path(article, check: 2) %></td>
+        <td><%= link_to image_tag('up.png', :class => 'vote'), edit_article_path(article, check: 1) %></td>
+        <td ><%= link_to image_tag('down.png', :class => 'vote'), edit_article_path(article, check: 2) %></td>
         <td class="title-table"><%= link_to article.title, article_path(article), {:class => 'title-table'} %></td>
         <td>
           <%if !current_user.nil? && article.author == current_user.name%>
@@ -14,15 +14,15 @@
         </td>  
       </tr>
       <tr>
-        <td class="text-table"><%= article.up_votes%></td>
-        <td class="text-table"><%= article.down_votes%></td>
-        <td class="data-table"><%= "Author: #{article.author}, comments: #{article.comments.count}" %></td>
+        <td class='text-table'><%= article.up_votes%></td>
+        <td class='text-table'><%= article.down_votes%></td>
+        <td class='data-table'><%= "Author: #{article.author}, comments: #{article.comments.count}" %></td>
       </tr>
-      <tr style="height:5px"></tr>
+      <tr style='height:5px'></tr>
     </tbody>
   </table>
 
 <% end %>
-<div align="center">
+<div align='center'>
   <%= link_to 'New article', new_article_path, {:id => 'helv', :class => 'r'} %>
 </div>

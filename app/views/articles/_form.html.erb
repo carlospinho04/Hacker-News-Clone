@@ -1,6 +1,6 @@
 <%= form_for @article do |f| %>
   <% if @article.errors.any? %>
-    <div align="center" id='error_explanation'>
+    <div align='center' id='error_explanation'>
       <h2>
         <%= pluralize(@article.errors.count, 'error') %> prohibited
         this article from being saved:
@@ -30,7 +30,7 @@
     <%= f.text_area :text %>
   </p>
 
-  <p class='submit3-box' align="center">
+  <p class='submit3-box' align='center'>
     <%= f.submit %>
   </p>
 

@@ -12,12 +12,12 @@
     <% if current_user %>
       <p class="r" id='helv'>
         Signed in as <%= current_user.name %> | <%= link_to 'Home', '/', {:id => 'helv', :class => 'r'} %> | <%= link_to 'Logout', '/logout', {:id => 'helv', :class => 'r'} %>
-    </p>
-  <% else %>
-    <p class="r" id='helv'>
-     <%= link_to 'Home', '/', {:id => 'helv', :class => 'r'}%> | <%= link_to 'Login', '/login', {:id => 'helv', :class => 'r'}%> | <%= link_to 'Signup', '/signup' , {:id => 'helv', :class => 'r'}%>
-    </p>
-  <% end %>
+      </p>
+    <% else %>
+      <p class="r" id='helv'>
+        <%= link_to 'Home', '/', {:id => 'helv', :class => 'r'}%> | <%= link_to 'Login', '/login', {:id => 'helv', :class => 'r'}%> | <%= link_to 'Signup', '/signup' , {:id => 'helv', :class => 'r'}%>
+      </p>
+    <% end %>
   <%= yield %>
   </body>
 </html>

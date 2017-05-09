@@ -1,20 +1,20 @@
-<h1 class="c" id="helv">Signup</h1>
-<%= stylesheet_link_tag "style" %>
-<div class="container">
-  <div class="login-container">
-    <div id="output"></div>
-    <div class="form-box">
+<h1 class='c' id='helv'>Signup</h1>
+<%= stylesheet_link_tag 'style' %>
+<div class='container'>
+  <div class='login-container'>
+    <div id='output'></div>
+    <div class='form-box'>
       <%= form_for :user, url: '/users' do |f| %>
-        <p class="c" id="helv"> Name</p>
+        <p class='c' id='helv'> Name</p>
         <%= f.text_field :name %>
-        <p class="c" id="helv"> Email</p>
+        <p class='c' id='helv'> Email</p>
         <%= f.text_field :email %>
-        <p class="c" id="helv"> Password</p>
+        <p class='c' id='helv'> Password</p>
         <%= f.password_field :password %>
-        <p class="c" id="helv"> Password Confirmation</p>
+        <p class='c' id='helv'> Password Confirmation</p>
         <%= f.password_field :password_confirmation %>
-        <div class="submit-box">
-          <%= submit_tag  "Submit"%>
+        <div class='submit-box'>
+          <%= submit_tag  'Submit'%>
         </div>
       <% end %>
     </div>

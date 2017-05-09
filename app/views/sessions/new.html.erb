@@ -1,18 +1,18 @@
-<h1 class="c" id="helv">Login</h1>
-<%= stylesheet_link_tag "style" %>
-<div class="container">
-  <div class="login-container">
-    <div id="output"></div>
-    <div class="form-box">
+<h1 class='c' id='helv'>Login</h1>
+<%= stylesheet_link_tag 'style' %>
+<div class='container'>
+  <div class='login-container'>
+    <div id='output'></div>
+    <div class='form-box'>
       <%= form_tag '/login' do %>
-        <p class="c" id="helv"> Email</p>
+        <p class='c' id='helv'> Email</p>
         <%= text_field_tag :email%>
-        <p class="c" id="helv">Password </p>
+        <p class='c' id='helv'>Password </p>
         <%= password_field_tag :password %>
-      <div class="submit-box">
-        <%= submit_tag  "Submit"%>
-      </div>
-      <%= link_to 'Reset Password', '/teste', {:id => 'helv', :class => 'c'}%>
+        <div class='submit-box'>
+          <%= submit_tag  'Submit'%>
+        </div>
+        <%= link_to 'Reset Password', '/teste', {:id => 'helv', :class => 'c'}%>
       <% end %>
     </div>
   </div>

@@ -1,9 +1,9 @@
 <%= form_for([@article, @article.comments.build]) do |f| %>
-  <p class="article-table">
+  <p class='article-table'>
     <%= f.hidden_field :commenter, value:current_user.name  %>
     <%= f.text_area :body %>
   </p>
-  <p class="submit2-box">
+  <p class='submit2-box'>
     <%= f.submit %>
   </p>
 <% end %>
