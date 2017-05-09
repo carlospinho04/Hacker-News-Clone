@@ -7,19 +7,14 @@ Rails.application.routes.draw do
 
   root 'articles#index'
 
-  get 'up' => 'articles#up'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
-  get '/cool' => 'gif#cool'
-  get '/sweet' => 'gif#sweet'
 
-  get '/signup' => 'users#new'
-  post '/users' => 'users#create'
-  get '/teste' => 'users#teste'
+  get '/teste' => 'users#reset'
   post'/resets' => 'users#edit'
 
 

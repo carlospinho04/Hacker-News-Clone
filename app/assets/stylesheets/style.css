@@ -41,6 +41,23 @@ html,body{
 
 }
 
+#text{
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+#text.title{
+  color: rgb(0, 0, 0);
+  font-size: medium; 
+}
+
+#text.article{
+  color: rgb(0, 0, 128);
+  font-size: small;
+
+}
+
 .title-table{
   text-align: justify;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -53,6 +70,11 @@ html,body{
   text-align: center;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: rgb(20, 20, 20);
+
+}
+
+.article-table{
+  margin-left: 10%;
 
 }
 
