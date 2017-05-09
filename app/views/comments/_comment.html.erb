@@ -1,18 +1,12 @@
-<p align="center">
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
-
-<p align="center">
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
-<%if !current_user.nil?%>
-  <%if comment.commenter == current_user.name%>
-    <p align="center">
-      <%= link_to 'Destroy Comment', [comment.article, comment],
-        method: :delete,
-        data: { confirm: 'Are you sure?'  } %>
-    </p>
-  <%end%>
-<%end%>
+<table class="article-table" border='0' cellpadding='10' cellspacing='0'>
+  <tbody>
+    <tr>
+      <td>
+        <%= comment.commenter %>
+      </td>
+    </tr>
+    <td>
+      <%= comment.body %>
+      </td>
+  </tbody>
+</table>

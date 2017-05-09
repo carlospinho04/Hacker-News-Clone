@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
+
   def new
   end
+
   def edit
     user = User.find_by_email(params[:email])
-    puts "#{params[:email]}, #{params[:name]}, #{user.name}"
-
     if user && user.name == params[:name]
       if params[:password] == params[:password_confirmation]
         user.update_attribute(:password, params[:password])

@@ -1,14 +1,10 @@
-<p class='c' id='helv'><strong>Title</strong></p>
-<p align='center'><%= @article.title %></p>
-
-<p class='c' id='helv'><strong>Text</strong></p>
-<p align='center'><%= @article.text %></p>
-
-<h2 align="center">Comments</h2>
+<p class='article-table'><strong>Title</strong></p>
+<p class='article-table'><%= @article.title %></p>
+<p class='article-table'><strong>Text</strong></p>
+<p class='article-table'><%= @article.text %></p>
+<h2 class='article-table'>Comments</h2>
 <%= render  @article.comments %>
 <%if !current_user.nil?%>
-  <h2 class='c' id='helv'>Add a comment</h2>
+  <h2 class='article-table'>Add comment</h2>
   <%= render 'comments/form' %>
 <%end%>
-
-<%= link_to 'Back', articles_path %>

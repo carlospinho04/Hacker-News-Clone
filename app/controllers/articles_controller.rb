@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :authorize, only: [:new, :create, :edit, :destroy]
   def index
     @articles = Article.all
   end
@@ -27,12 +28,6 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def up
-    @article = Article.find(params[:id])
-    votes = @article.up_votes + 1
-    @article.update_attribute(:up_votes, votes)
-    redirect_to '/'
-  end
 
   def show
     @article = Article.find(params[:id])
@@ -49,16 +44,6 @@ class ArticlesController < ApplicationController
       redirect_to @article
     else
       render 'new'
-    end
-  end
-
-  def update
-    @article = Article.find(params[:id])
-
-    if @article.update(article_params)
-      redirect_to @article
-    else
-      render 'edit'
     end
   end
 

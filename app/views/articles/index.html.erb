@@ -1,18 +1,12 @@
 <% @articles.each do |article| %>
-  <table border='0' cellpadding='0' cellspacing='0'>
+  <table class="article-table" border='0' cellpadding='0' cellspacing='0'>
     <tbody>
       <tr>
-        <%if !current_user.nil?%>
-          <td><%= link_to image_tag("up.png", :class => "vote"), edit_article_path(article, check: 1) %></td>
-          <td ><%= link_to image_tag("down.png", :class => "vote"), edit_article_path(article, check: 2) %></td>
-        <%else%>
-          <td><%= link_to image_tag("up.png", :class => "vote"), '/login' %></td>
-          <td><%= link_to image_tag("down.png", :class => "vote"), '/login' %></td>
-        <%end%> 
+        <td><%= link_to image_tag("up.png", :class => "vote"), edit_article_path(article, check: 1) %></td>
+        <td ><%= link_to image_tag("down.png", :class => "vote"), edit_article_path(article, check: 2) %></td>
         <td class="title-table"><%= link_to article.title, article_path(article), {:class => 'title-table'} %></td>
         <td>
           <%if !current_user.nil? && article.author == current_user.name%>
-            <td></td>
             <td><%= link_to 'Destroy', article_path(article),
               method: :delete,
               data: { confirm: 'Are you sure?'  }%></td>
@@ -29,8 +23,6 @@
   </table>
 
 <% end %>
-<%if !current_user.nil?%>
-  <div align="center">
-    <%= link_to 'New article', new_article_path %>
-  </div>
-<%end%>
+<div align="center">
+  <%= link_to 'New article', new_article_path, {:id => 'helv', :class => 'r'} %>
+</div>
